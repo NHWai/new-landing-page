@@ -7,40 +7,197 @@
     <link rel="stylesheet" href="final.css" />
     <title>LANDING</title>
   </head>
-  <body>
-    <nav id="nav" class="bg-lime-200">
-      <div class="container p-4 mx-auto md:flex md:justify-between">
-        <h1 class="text-4xl font-bold text-cyan-600 text-center">
-          Hello World
-        </h1>
-        <ul class="hidden w-1/4 justify-around md:flex">
-          <li>Home</li>
-          <li>About</li>
-          <li>Contact</li>
-        </ul>
+  <body class="overflow-x-hidden max-w-screen">
+    <!-- Overlay -->
+<div class=" hidden overlay absolute mix-blend-overlay w-full h-full bg-slate-900 opacity-50 ">
+
+</div>
+    <nav id="nav" class="font-body text-xs ">
+      <div
+        class="
+          container
+    
+          flex
+          justify-between
+          p-4
+          mx-auto
+          md:items-center
+        "
+      >
+        <!-- Logo -->
+        <div>
+          <img class="mt-1" src="./images/logo.svg" alt="" />
+        </div>
+
+        <!-- Hamburger Menu -->
+        <div id="menu" class="md:hidden cursor-pointer">
+          <img class="mt-1" src="./images/icon-menu.svg" alt="" />
+        </div>
+
+
+        <!-- Nav links and register container -->
+        <div
+          id="nav_contain"
+          class="
+ 
+            close
+            absolute
+            w-2/3
+            h-screen
+            top-0
+            right-0
+            transition-all
+            duration-700
+            flex flex-col
+            space-y-8
+            pl-32
+            pt-6
+            bg-white
+            md:static
+            md:flex-row
+            md:space-y-0
+            md:p-0
+            md:w-full
+            md:h-auto
+          
+            
+          "
+        >
+          <!-- Close Menu -->
+          <div id="menu-close" class="cursor-pointer">
+            <img
+              class="w-7 ml-auto mr-8 -mt-2 md:hidden"
+              src="./images/icon-close-menu.svg"
+              alt=""
+            />
+          </div>
+
+          <!-- NavLinks -->
+          <ul
+            class="
+              flex flex-col
+              space-y-6
+              md:flex-row
+              md:space-y-0
+              md:items-center
+              md:space-x-6
+              md:ml-12
+            "
+          >
+          <!-- Features -->
+            <li class="relative">
+              <a href="#" class="inline-block"
+                >Features <img class=" arrow transition-all duration-300 inline-block" src="./images/icon-arrow-down.svg"></img>
+              </a>
+              <div class=" extend hidden transition-all duration-700 min-w-max py-1 cursor-pointer bg-gray-50 rounded-lg md:absolute md:top-6 md:right-2  ">
+                <div class="flex space-x-2 rounded-md hover:bg-gray-200 py-2 px-4"> 
+                  <img src="./images/icon-calendar.svg" alt="">
+                  <small>Calender</small>
+                </div>
+                <div class="flex space-x-2 rounded-md hover:bg-gray-200 py-2 px-4"> 
+                  <img src="./images/icon-planning.svg" alt="">
+                  <small>Planning</small>
+                </div>  
+                <div class="flex space-x-2 rounded-md hover:bg-gray-200 py-2 px-4"> 
+                  <img src="./images/icon-reminders.svg" alt="">
+                  <small>Reminders</small>
+                </div>
+                
+              </div>
+            
+            </li>
+            <!-- Company -->
+            <li><a href="#" class="inline-block">Company
+              <img class=" arrow transition-all duration-300 inline-block" src="./images/icon-arrow-down.svg"></img>
+            </a>
+            <div class=" extend hidden transition-all duration-700 w-auto p-2  cursor-pointer bg-gray-50 rounded-lg md:absolute   ">
+              <div class=" rounded-md hover:bg-gray-200 py-2 px-6"> 
+              
+                <small>GGI</small>
+              </div>
+              <div class=" rounded-md hover:bg-gray-200 py-2 px-6"> 
+             
+                <small>CLLI</small>
+              </div>  
+              <div class="rounded-md hover:bg-gray-200 py-2 px-6"> 
+               
+                <small>LLBD</small>
+              </div>
+          </li>
+            <li><a href="#" class="inline-block">Career</a></li>
+            <li><a href="#" class="inline-block">About</a></li>
+          </ul>
+          <!-- NavRegister -->
+          <div
+            class="
+              flex flex-col
+              space-y-6
+              items-start
+              md:flex md:flex-row
+              md:space-y-0 md:space-x-6
+              md:justify-around
+              md:ml-auto
+              md:items-center
+            "
+          >
+            <a href="#" class="inline-block">Register</a>
+            <a
+              href="#"
+              class="
+                block
+                btn
+                border-black border
+                duration-75
+                hover:bg-black
+                hover:text-white
+              "
+              >Log in</a
+            >
+          </div>
+        </div>
       </div>
     </nav>
-    <section id="hero" class="mt-12">
-      <div
-        class="container p-4 mx-auto flex flex-col justify-between md:flex-row"
-      >
-        <img
-          class="h-64"
-          src="img/ashwini-chaudhary-monty-Zyd_6lLUiHg-unsplash.jpg"
-          alt=""
-        />
 
-        <div class="flex flex-col w-1/2">
-          <h1 class="text-6xl mb-8 font-bold leading-tight uppercase">
-            Rain Water Harvesting
+    <!-- Hero -->
+    <section id="hero" class="my-12">
+      <div
+        class="container p-4 mx-auto flex flex-col 
+        space-y-8 md:justify-between md:flex-row-reverse md:items-end"
+      >
+      <!-- Hero Image -->
+       <div style="background-image:url(./images/image-hero-desktop.png)" class=" w-full h-80   bg-contain bg-no-repeat bg-center md:w-1/2 " ></div>
+      <!-- Hero Content -->
+        <div class="flex flex-col  space-y-4 md:w-1/2 md:space-y-6">
+          <h1 class=" text-4xl  text-center font-bold leading-tight uppercase md:text-left md:text-6xl">
+        Make Remote Work
           </h1>
-          <p class="leading">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia quo
-            nihil itaque laborum exercitationem blanditiis minus dignissimos,
-            quam corrupti eos.
+          <p class="leading text-slate-500 text-center md:text-left">
+            Get your team in sync no matter your location. Streamline process, create team rituals, and watch productivity soar.
           </p>
+          <a
+          href="#"
+          class="
+          btn
+          block
+          border-black border
+          duration-75
+          hover:bg-black
+          hover:text-white
+          mx-auto
+          max-w-fit
+          md:m-0
+          "
+          >Get Started</a
+        >
+        <div class="flex justify-around md:pt-6">
+<img class="h-6" src="./images/client-audiophile.svg" alt="">
+<img class="h-6" src="./images/client-databiz.svg" alt="">
+<img class="h-6" src="./images/client-maker.svg" alt="">
+<img class="h-6" src="./images/client-meet.svg" alt="">
+        </div>
         </div>
       </div>
     </section>
+    <script src="index.js"></script>
   </body>
 </html>
